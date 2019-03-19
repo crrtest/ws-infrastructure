@@ -1,0 +1,24 @@
+---
+
+app_settings:
+  artifact_key: '{{ env }}-WXFHRA62FQ'
+  stackName: 'WXFHRA62FQ'
+  blueGreen: false
+  app_name: 'WXFHRA62FQ'
+  type: 'lambda'
+  dnsSource: ~
+
+uniqueSuffix: ""
+stackTags:
+  product: '{{ product }}'
+  application: '{{ app_name }}'
+  billing: 'global'
+
+parameter_store_permissions: []
+
+custom_lambda_policies: []
+custom_lambda_outputs: {}
+custom_lambda_resources: {}
+custom_lambda_properties: {}
+
+WXFHRA62FQ_formation: '{{ lambda_default_formation }}'
