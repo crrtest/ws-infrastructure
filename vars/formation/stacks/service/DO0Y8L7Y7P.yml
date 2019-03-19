@@ -1,0 +1,24 @@
+---
+
+app_settings:
+  artifact_key: '{{ env }}-DO0Y8L7Y7P'
+  stackName: 'DO0Y8L7Y7P'
+  blueGreen: false
+  app_name: 'DO0Y8L7Y7P'
+  type: 'lambda'
+  dnsSource: ~
+
+uniqueSuffix: ""
+stackTags:
+  product: '{{ product }}'
+  application: '{{ app_name }}'
+  billing: 'global'
+
+parameter_store_permissions: []
+
+custom_lambda_policies: []
+custom_lambda_outputs: {}
+custom_lambda_resources: {}
+custom_lambda_properties: {}
+
+DO0Y8L7Y7P_formation: '{{ lambda_default_formation }}'
