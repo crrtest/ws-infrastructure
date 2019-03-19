@@ -1,0 +1,51 @@
+---
+
+app_settings:
+  artifact_key: '{{ env }}-FRAXQVSRH4'
+  stackName: 'FRAXQVSRH4'
+  blueGreen: true
+  weight: 1
+  app_name: 'FRAXQVSRH4'
+  type: 'ecs'
+  target_priority: '10'
+
+uniqueSuffix: ''
+stack_color: '{{ stackColor }}'
+
+parameter_store_permissions:
+  - '{{ env }}.{{ product }}.FRAXQVSRH4.*'
+  - '{{ env }}.ess.FRAXQVSRH4.*'
+  - '{{ env }}.ws.FRAXQVSRH4.*'
+  - 'shared.newrelic.lampogroup.license_key'
+
+stackTags:
+  product: '{{ product }}'
+  application: '{{ app_name }}'
+  ansibleStackFormat: '2.0.0'
+  stackColor: '{{ stack_color }}'
+  billing: 'global'
+
+target_group:
+  health_check_path: '//some-new-service/ready'
+  healthy_threshold_count: 2
+  unhealthy_threshold_count: 2
+
+listener_rule:
+  field: 'path-pattern'
+  values:
+    - '//some-new-service/*'
+  priority: '{{ app_settings["target_priority"]|int }}'
+
+task_definition:
+  cpu: 128
+  memory_reservation: 512
+
+container_service:
+  desired_count: '2'
+  scaling:
+    min_count: '2'
+    max_count: '4'
+  maximum_percent: 200
+  minimum_healthy_percent: 100
+
+FRAXQVSRH4_formation: '{{ ecs_service_and_task_definition_standard_formation }}'
