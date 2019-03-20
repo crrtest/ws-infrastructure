@@ -1,0 +1,23 @@
+---
+
+app_settings:
+    artifact_key: {{ env }}-BFR6SD0U6V
+    stackName: BFR6SD0U6V
+    blueGreen: false
+    app_name: BFR6SD0U6V
+    type: lambda
+    dnsSource: ~
+
+stackTags:
+    product: {{ product }}
+    application: {{ app_name }}
+    billing: global
+
+uniqueSuffix: ""
+
+custom_lambda_policies: []
+custom_lambda_outputs: {}
+custom_lambda_resources: {}
+custom_lambda_properties: {}
+
+BFR6SD0U6V_formation: {{ lambda_default_formation }}
