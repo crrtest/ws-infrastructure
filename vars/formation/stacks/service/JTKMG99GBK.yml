@@ -1,0 +1,23 @@
+---
+
+app_settings:
+    artifact_key: {{ env }}-JTKMG99GBK
+    stackName: JTKMG99GBK
+    blueGreen: false
+    app_name: JTKMG99GBK
+    type: lambda
+    dnsSource: ~
+
+stackTags:
+    product: {{ product }}
+    application: {{ app_name }}
+    billing: global
+
+uniqueSuffix: ""
+
+custom_lambda_policies: []
+custom_lambda_outputs: {}
+custom_lambda_resources: {}
+custom_lambda_properties: {}
+
+JTKMG99GBK_formation: {{ lambda_default_formation }}
