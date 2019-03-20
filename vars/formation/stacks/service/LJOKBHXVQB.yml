@@ -1,0 +1,23 @@
+---
+
+app_settings:
+    artifact_key: {{ env }}-LJOKBHXVQB
+    stackName: LJOKBHXVQB
+    blueGreen: false
+    app_name: LJOKBHXVQB
+    type: lambda
+    dnsSource: ~
+
+stackTags:
+    product: {{ product }}
+    application: {{ app_name }}
+    billing: global
+
+uniqueSuffix: ""
+
+custom_lambda_policies: []
+custom_lambda_outputs: {}
+custom_lambda_resources: {}
+custom_lambda_properties: {}
+
+LJOKBHXVQB_formation: {{ lambda_default_formation }}
