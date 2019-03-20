@@ -1,0 +1,23 @@
+---
+
+app_settings:
+    artifact_key: {{ env }}-WBVQ7LD00W
+    stackName: WBVQ7LD00W
+    blueGreen: false
+    app_name: WBVQ7LD00W
+    type: lambda
+    dnsSource: ~
+
+stackTags:
+    product: {{ product }}
+    application: {{ app_name }}
+    billing: global
+
+uniqueSuffix: ""
+
+custom_lambda_policies: []
+custom_lambda_outputs: {}
+custom_lambda_resources: {}
+custom_lambda_properties: {}
+
+WBVQ7LD00W_formation: {{ lambda_default_formation }}
