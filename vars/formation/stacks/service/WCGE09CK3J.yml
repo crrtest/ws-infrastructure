@@ -1,0 +1,23 @@
+---
+
+app_settings:
+    artifact_key: {{ env }}-WCGE09CK3J
+    stackName: WCGE09CK3J
+    blueGreen: false
+    app_name: WCGE09CK3J
+    type: lambda
+    dnsSource: ~
+
+stackTags:
+    product: {{ product }}
+    application: {{ app_name }}
+    billing: global
+
+uniqueSuffix: ""
+
+custom_lambda_policies: []
+custom_lambda_outputs: {}
+custom_lambda_resources: {}
+custom_lambda_properties: {}
+
+WCGE09CK3J_formation: {{ lambda_default_formation }}
