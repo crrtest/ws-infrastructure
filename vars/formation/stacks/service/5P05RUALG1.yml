@@ -1,0 +1,23 @@
+---
+
+app_settings:
+    artifact_key: {{ env }}-5P05RUALG1
+    stackName: 5P05RUALG1
+    blueGreen: false
+    app_name: 5P05RUALG1
+    type: lambda
+    dnsSource: ~
+
+stackTags:
+    product: {{ product }}
+    application: {{ app_name }}
+    billing: global
+
+uniqueSuffix: ""
+
+custom_lambda_policies: []
+custom_lambda_outputs: {}
+custom_lambda_resources: {}
+custom_lambda_properties: {}
+
+5P05RUALG1_formation: {{ lambda_default_formation }}
