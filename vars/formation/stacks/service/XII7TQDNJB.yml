@@ -1,0 +1,23 @@
+---
+
+app_settings:
+    artifact_key: {{ env }}-XII7TQDNJB
+    stackName: XII7TQDNJB
+    blueGreen: false
+    app_name: XII7TQDNJB
+    type: lambda
+    dnsSource: ~
+
+stackTags:
+    product: {{ product }}
+    application: {{ app_name }}
+    billing: global
+
+uniqueSuffix: ""
+
+custom_lambda_policies: []
+custom_lambda_outputs: {}
+custom_lambda_resources: {}
+custom_lambda_properties: {}
+
+XII7TQDNJB_formation: {{ lambda_default_formation }}
