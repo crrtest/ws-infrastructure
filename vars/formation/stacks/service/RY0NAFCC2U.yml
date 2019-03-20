@@ -1,0 +1,23 @@
+---
+
+app_settings:
+    artifact_key: {{ env }}-RY0NAFCC2U
+    stackName: RY0NAFCC2U
+    blueGreen: false
+    app_name: RY0NAFCC2U
+    type: lambda
+    dnsSource: ~
+
+stackTags:
+    product: {{ product }}
+    application: {{ app_name }}
+    billing: global
+
+uniqueSuffix: ""
+
+custom_lambda_policies: []
+custom_lambda_outputs: {}
+custom_lambda_resources: {}
+custom_lambda_properties: {}
+
+RY0NAFCC2U_formation: {{ lambda_default_formation }}
